@@ -28,8 +28,8 @@ public class Comment {
     @Column
     private String content;
 
-    @Column(name = "user_name")
-    private String userName;
+    @Column(name = "user_idx")
+    private String userIdx;
 
     public void update(CommentDto.Request dto){
         this.content = dto.getContent();
