@@ -19,14 +19,14 @@ public class CommentDto {
         @JsonProperty
         private String content;
 
-        @JsonProperty("user_name")
-        private String userName;
+        @JsonProperty("user_idx")
+        private Long userIdx;
 
         public Comment toEntity(){
             return Comment.builder()
                     .postIdx(postIdx)
                     .content(content)
-                    .userName(userName)
+                    .userIdx(userIdx)
                     .build();
         }
     }
@@ -44,14 +44,14 @@ public class CommentDto {
         @JsonProperty
         private String content;
 
-        @JsonProperty("user_name")
-        private String userName;
+        @JsonProperty("user_idx")
+        private Long userIdx;
 
         public Response(Comment comment){
             this.idx = comment.getIdx();
             this.postIdx = comment.getPostIdx();
             this.content = comment.getContent();
-            this.userName = comment.getUserName();
+            this.userIdx = comment.getUserIdx();
         }
     }
 
