@@ -28,14 +28,16 @@ public class Post {
     private String language;
 
     private String content;
-
-    private String name;
+    
+    @Column(name = "user_idx")
+    private Long userIdx;
+    
 
     public void update(PostDto.Request dto) {
         this.repositoryInfo = dto.getRepositoryInfo();
         this.language = dto.getLanguage();
         this.content = dto.getContent();
-        this.name = dto.getName();
+        this.userIdx = dto.getUserIdx();
     }
 
 
