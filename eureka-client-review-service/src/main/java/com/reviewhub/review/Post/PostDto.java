@@ -24,6 +24,9 @@ public class PostDto {
 
         @JsonProperty("user_idx")
         private Long userIdx;
+        
+        @JsonProperty
+        private String title;
 
         public Post toEntity() {
             return Post.builder()
@@ -31,6 +34,7 @@ public class PostDto {
                     .language(language)
                     .content(content)
                     .userIdx(userIdx)
+                    .title(title)
                     .build();
         }
     }
@@ -53,6 +57,9 @@ public class PostDto {
 
         @JsonProperty("user_idx")
         private Long userIdx;
+        
+        @JsonProperty
+        private String title;
 
         public Response(Post post) {
             idx = post.getIdx();
@@ -60,6 +67,7 @@ public class PostDto {
             language = post.getLanguage();
             content = post.getContent();
             userIdx = post.getUserIdx();
+            title = post.getTitle();
         }
     }
 
