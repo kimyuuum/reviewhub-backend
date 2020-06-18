@@ -29,7 +29,7 @@ public class Comment {
     private String content;
 
     @Column(name = "user_idx")
-    private String userIdx;
+    private Long userIdx;
 
     public void update(CommentDto.Request dto){
         this.content = dto.getContent();
