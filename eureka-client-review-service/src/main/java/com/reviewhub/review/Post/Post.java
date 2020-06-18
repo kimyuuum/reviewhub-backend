@@ -32,12 +32,15 @@ public class Post {
     @Column(name = "user_idx")
     private Long userIdx;
     
+    private String title;
+    
 
     public void update(PostDto.Request dto) {
         this.repositoryInfo = dto.getRepositoryInfo();
         this.language = dto.getLanguage();
         this.content = dto.getContent();
         this.userIdx = dto.getUserIdx();
+        this.title = dto.getTitle();
     }
 
 
