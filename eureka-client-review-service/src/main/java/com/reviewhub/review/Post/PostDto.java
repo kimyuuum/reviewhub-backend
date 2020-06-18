@@ -22,15 +22,15 @@ public class PostDto {
         @JsonProperty
         private String content;
 
-        @JsonProperty
-        private String name;
+        @JsonProperty("user_idx")
+        private Long userIdx;
 
         public Post toEntity() {
             return Post.builder()
                     .repositoryInfo(repositoryInfo)
                     .language(language)
                     .content(content)
-                    .name(name)
+                    .userIdx(userIdx)
                     .build();
         }
     }
@@ -51,15 +51,15 @@ public class PostDto {
         @JsonProperty
         private String content;
 
-        @JsonProperty
-        private String name;
+        @JsonProperty("user_idx")
+        private Long userIdx;
 
         public Response(Post post) {
             idx = post.getIdx();
             repositoryInfo = post.getRepositoryInfo();
             language = post.getLanguage();
             content = post.getContent();
-            name = post.getName();
+            userIdx = post.getUserIdx();
         }
     }
 
