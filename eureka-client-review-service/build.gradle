@@ -47,6 +47,10 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    // mockito
+    testImplementation "org.mockito:mockito-core:3.+"
+    // assertJ
+    testImplementation "org.assertj:assertj-core:3.23.1"
 }
 
 dependencyManagement {
