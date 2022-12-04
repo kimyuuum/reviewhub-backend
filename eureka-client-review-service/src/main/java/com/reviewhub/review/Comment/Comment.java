@@ -30,10 +30,4 @@ public class Comment {
 
     @Column(name = "user_idx")
     private Long userIdx;
-
-    public void update(CommentDto.Request dto){
-        this.content = dto.getContent();
-        this.userName = dto.getUserName();
-    }
-
 }
